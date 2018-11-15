@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+	<div class="row">
+		<div class="container col s6">
+			<center>
+				<h4>Questão (gabarito): <span id="num_questao_certo">1</span></h4>
+				<span id="q_certo" class="col s6"></span>
+				<input type="text" name="" id="text_certo">
+				
+
+				<h4>Questão (sua prova): <span id="num_questao_seu">1</span></h4>
+				<span id="q_seu" class="col s6"></span>
+				<input type="text" name="" id="text_seu">
+
+				<a class="waves-effect waves-light btn-large" id="gerarJooj">gerar jooj</a>
+			</center>
+		</div>
+
+		<div class="container col s3">
+			<center>
+				<h3>Respostas</h3>
+				<table class="striped">
+	        <thead>
+	          <tr>
+	            <th>QUESTÃO</th>
+	            <th>GABARITO</th>
+	            <th>SUA RESPOSTA</th>
+	          </tr>
+	        </thead>
+	        <tbody id="corpo_tabela">
+	        </tbody>
+      	</table>
+			</center>
+		</div>
+
+		<div class="container col s3">
+			<center>
+				<h3>Estatisticas</h3>
+			</center>
+			<h5>Total</h5>
+			<span id="qtdTotal">0</span>
+			<h5>Certas</h5>
+			<span id="qtdCertas">0</span>
+			<h5>Erradas</h5>
+			<span id="qtdErradas">0</span>
+			<h5>% de acerto</h5>
+			<span id="perc">0%</span>
+		</div>
+
+	</div>
+</body>
+<script type="text/javascript">
+$(document).ready( function () {
+	var atual_certo = 0;
+	var gab_certo = new Array();
+	$("#text_certo").keyup(function(e){
+		if (e.key >= 'a' && e.key <= 'e') {
+			atual_certo++;
+			gab_certo.push(e.key);
+		}
+
+		if (e.key == 'Backspace') {
+			if (atual_certo > 0) {
+				gab_certo.pop();
+				atual_certo--;
+			}
+		}
+    $("#num_questao_certo").text(atual_certo + 1);
+    $("#q_certo").text(gab_certo.toString());
+
+    $("#text_certo").val("");
+	});
+
+	var atual_seu = 0;
+	var gab_seu = new Array();
+	$("#text_seu").keyup(function(e){
+		if (e.key >= 'a' && e.key <= 'e') {
+			atual_seu++;
+			gab_seu.push(e.key);
+		}
+
+		if (e.key == 'Backspace') {
+			if (atual_seu > 0) {
+				gab_seu.pop();
+				atual_seu--;
+			}
+		}
+    $("#num_questao_seu").text(atual_seu + 1);
+    $("#q_seu").text(gab_seu.toString());
+
+    $("#text_seu").val("");
+	});
+
+	$("#gerarJooj").click( function () {
+		$('#corpo_tabela').empty();//todo
+		let qtdCertas = 0;
+		let qtdErradas = 0;
+		for (i = atual_certo -1; i >= 0; i --) {
+			let classe = 'deep-orange lighten-4';
+			if ( gab_certo[i] == gab_seu[i]) {
+				qtdCertas++;
+				classe = 'green lighten-4';
+			} else {
+				qtdErradas ++;
+			}
+
+			$('#corpo_tabela').after('<tr class=\"' + classe + '\"><td><b>'+ (i + 1) + '</b></td>' + '<td>' + gab_certo[i] + '</td>' + '<td>' + gab_seu[i] + '</td></tr>');
+
+			$("#qtdTotal").text(atual_certo);
+			$("#qtdCertas").text(qtdCertas);
+			$("#qtdErradas").text(qtdErradas);
+			$("#perc").text((100 * qtdCertas / atual_certo) + "%");
+		}
+	})
+})
+</script>
+</html>

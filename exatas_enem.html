@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)file:///C:/Users/alvarez/Desktop/a.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+	<script src="./exatas_enem_files/jquery.min.js.download"></script>
+	<link rel="stylesheet" href="./exatas_enem_files/materialize.min.css">
+  <script src="./exatas_enem_files/materialize.min.js.download"></script>
+</head>
+<body>
+	<div class="row">
+		<div class="container col s6">
+			<center>
+				<h4>Questão (gabarito): <span id="num_questao_certo">91</span></h4>
+				<span id="q_certo" class="col s6">a,c,e,d,e,a,e,a,e,b,e,c,a,a,d,a,b,b,d,b,c,e,d,e,d,d,c,d,d,a,b,c,c,a,c,b,c,a,c,e,b,d,e,e,b,e,b,b,d,e,e,c,c,c,d,a,c,e,a,d,c,b,c,a,a,e,b,b,c,b,c,a,d,a,e,d,a,b,a,d,d,a,d,d,a,b,d,b,e,a</span>
+				<input type="text" name="" id="text_certo">
+				
+
+				<h4>Questão (sua prova): <span id="num_questao_seu">91</span></h4>
+				<span id="q_seu" class="col s6">b,b,e,a,c,a,b,e,d,a,b,c,c,e,b,c,c,b,d,b,c,a,c,b,c,e,a,b,e,d,c,a,c,a,b,c,b,a,d,e,c,b,d,e,c,e,c,b,d,a,d,c,d,c,d,a,b,e,a,b,c,b,e,a,e,b,d,b,d,b,c,c,c,c,d,b,a,c,a,c,d,a,c,c,a,c,b,c,c,a</span>
+				<input type="text" name="" id="text_seu">
+
+				<a class="waves-effect waves-light btn-large" id="gerarJooj">gerar jooj</a>
+			</center>
+		</div>
+
+		<div class="container col s3">
+			<center>
+				<h3>Respostas</h3>
+				<table class="striped">
+	        <thead>
+	          <tr>
+	            <th>QUESTÃO</th>
+	            <th>GABARITO</th>
+	            <th>SUA RESPOSTA</th>
+	          </tr>
+	        </thead>
+	        <tbody id="corpo_tabela"></tbody><tr class="deep-orange lighten-4"><td><b>1</b></td><td>a</td><td>b</td></tr><tr class="deep-orange lighten-4"><td><b>2</b></td><td>c</td><td>b</td></tr><tr class="green lighten-4"><td><b>3</b></td><td>e</td><td>e</td></tr><tr class="deep-orange lighten-4"><td><b>4</b></td><td>d</td><td>a</td></tr><tr class="deep-orange lighten-4"><td><b>5</b></td><td>e</td><td>c</td></tr><tr class="green lighten-4"><td><b>6</b></td><td>a</td><td>a</td></tr><tr class="deep-orange lighten-4"><td><b>7</b></td><td>e</td><td>b</td></tr><tr class="deep-orange lighten-4"><td><b>8</b></td><td>a</td><td>e</td></tr><tr class="deep-orange lighten-4"><td><b>9</b></td><td>e</td><td>d</td></tr><tr class="deep-orange lighten-4"><td><b>10</b></td><td>b</td><td>a</td></tr><tr class="deep-orange lighten-4"><td><b>11</b></td><td>e</td><td>b</td></tr><tr class="green lighten-4"><td><b>12</b></td><td>c</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>13</b></td><td>a</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>14</b></td><td>a</td><td>e</td></tr><tr class="deep-orange lighten-4"><td><b>15</b></td><td>d</td><td>b</td></tr><tr class="deep-orange lighten-4"><td><b>16</b></td><td>a</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>17</b></td><td>b</td><td>c</td></tr><tr class="green lighten-4"><td><b>18</b></td><td>b</td><td>b</td></tr><tr class="green lighten-4"><td><b>19</b></td><td>d</td><td>d</td></tr><tr class="green lighten-4"><td><b>20</b></td><td>b</td><td>b</td></tr><tr class="green lighten-4"><td><b>21</b></td><td>c</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>22</b></td><td>e</td><td>a</td></tr><tr class="deep-orange lighten-4"><td><b>23</b></td><td>d</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>24</b></td><td>e</td><td>b</td></tr><tr class="deep-orange lighten-4"><td><b>25</b></td><td>d</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>26</b></td><td>d</td><td>e</td></tr><tr class="deep-orange lighten-4"><td><b>27</b></td><td>c</td><td>a</td></tr><tr class="deep-orange lighten-4"><td><b>28</b></td><td>d</td><td>b</td></tr><tr class="deep-orange lighten-4"><td><b>29</b></td><td>d</td><td>e</td></tr><tr class="deep-orange lighten-4"><td><b>30</b></td><td>a</td><td>d</td></tr><tr class="deep-orange lighten-4"><td><b>31</b></td><td>b</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>32</b></td><td>c</td><td>a</td></tr><tr class="green lighten-4"><td><b>33</b></td><td>c</td><td>c</td></tr><tr class="green lighten-4"><td><b>34</b></td><td>a</td><td>a</td></tr><tr class="deep-orange lighten-4"><td><b>35</b></td><td>c</td><td>b</td></tr><tr class="deep-orange lighten-4"><td><b>36</b></td><td>b</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>37</b></td><td>c</td><td>b</td></tr><tr class="green lighten-4"><td><b>38</b></td><td>a</td><td>a</td></tr><tr class="deep-orange lighten-4"><td><b>39</b></td><td>c</td><td>d</td></tr><tr class="green lighten-4"><td><b>40</b></td><td>e</td><td>e</td></tr><tr class="deep-orange lighten-4"><td><b>41</b></td><td>b</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>42</b></td><td>d</td><td>b</td></tr><tr class="deep-orange lighten-4"><td><b>43</b></td><td>e</td><td>d</td></tr><tr class="green lighten-4"><td><b>44</b></td><td>e</td><td>e</td></tr><tr class="deep-orange lighten-4"><td><b>45</b></td><td>b</td><td>c</td></tr><tr class="green lighten-4"><td><b>46</b></td><td>e</td><td>e</td></tr><tr class="deep-orange lighten-4"><td><b>47</b></td><td>b</td><td>c</td></tr><tr class="green lighten-4"><td><b>48</b></td><td>b</td><td>b</td></tr><tr class="green lighten-4"><td><b>49</b></td><td>d</td><td>d</td></tr><tr class="deep-orange lighten-4"><td><b>50</b></td><td>e</td><td>a</td></tr><tr class="deep-orange lighten-4"><td><b>51</b></td><td>e</td><td>d</td></tr><tr class="green lighten-4"><td><b>52</b></td><td>c</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>53</b></td><td>c</td><td>d</td></tr><tr class="green lighten-4"><td><b>54</b></td><td>c</td><td>c</td></tr><tr class="green lighten-4"><td><b>55</b></td><td>d</td><td>d</td></tr><tr class="green lighten-4"><td><b>56</b></td><td>a</td><td>a</td></tr><tr class="deep-orange lighten-4"><td><b>57</b></td><td>c</td><td>b</td></tr><tr class="green lighten-4"><td><b>58</b></td><td>e</td><td>e</td></tr><tr class="green lighten-4"><td><b>59</b></td><td>a</td><td>a</td></tr><tr class="deep-orange lighten-4"><td><b>60</b></td><td>d</td><td>b</td></tr><tr class="green lighten-4"><td><b>61</b></td><td>c</td><td>c</td></tr><tr class="green lighten-4"><td><b>62</b></td><td>b</td><td>b</td></tr><tr class="deep-orange lighten-4"><td><b>63</b></td><td>c</td><td>e</td></tr><tr class="green lighten-4"><td><b>64</b></td><td>a</td><td>a</td></tr><tr class="deep-orange lighten-4"><td><b>65</b></td><td>a</td><td>e</td></tr><tr class="deep-orange lighten-4"><td><b>66</b></td><td>e</td><td>b</td></tr><tr class="deep-orange lighten-4"><td><b>67</b></td><td>b</td><td>d</td></tr><tr class="green lighten-4"><td><b>68</b></td><td>b</td><td>b</td></tr><tr class="deep-orange lighten-4"><td><b>69</b></td><td>c</td><td>d</td></tr><tr class="green lighten-4"><td><b>70</b></td><td>b</td><td>b</td></tr><tr class="green lighten-4"><td><b>71</b></td><td>c</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>72</b></td><td>a</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>73</b></td><td>d</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>74</b></td><td>a</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>75</b></td><td>e</td><td>d</td></tr><tr class="deep-orange lighten-4"><td><b>76</b></td><td>d</td><td>b</td></tr><tr class="green lighten-4"><td><b>77</b></td><td>a</td><td>a</td></tr><tr class="deep-orange lighten-4"><td><b>78</b></td><td>b</td><td>c</td></tr><tr class="green lighten-4"><td><b>79</b></td><td>a</td><td>a</td></tr><tr class="deep-orange lighten-4"><td><b>80</b></td><td>d</td><td>c</td></tr><tr class="green lighten-4"><td><b>81</b></td><td>d</td><td>d</td></tr><tr class="green lighten-4"><td><b>82</b></td><td>a</td><td>a</td></tr><tr class="deep-orange lighten-4"><td><b>83</b></td><td>d</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>84</b></td><td>d</td><td>c</td></tr><tr class="green lighten-4"><td><b>85</b></td><td>a</td><td>a</td></tr><tr class="deep-orange lighten-4"><td><b>86</b></td><td>b</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>87</b></td><td>d</td><td>b</td></tr><tr class="deep-orange lighten-4"><td><b>88</b></td><td>b</td><td>c</td></tr><tr class="deep-orange lighten-4"><td><b>89</b></td><td>e</td><td>c</td></tr><tr class="green lighten-4"><td><b>90</b></td><td>a</td><td>a</td></tr>
+      	</table>
+			</center>
+		</div>
+
+		<div class="container col s3">
+			<center>
+				<h3>Estatisticas</h3>
+			</center>
+			<h5>Total</h5>
+			<span id="qtdTotal">90</span>
+			<h5>Certas</h5>
+			<span id="qtdCertas">33</span>
+			<h5>Erradas</h5>
+			<span id="qtdErradas">57</span>
+			<h5>% de acerto</h5>
+			<span id="perc">36.666666666666664%</span>
+		</div>
+
+	</div>
+
+<script type="text/javascript">
+$(document).ready( function () {
+	var atual_certo = 0;
+	var gab_certo = new Array();
+	$("#text_certo").keyup(function(e){
+		if (e.key >= 'a' && e.key <= 'e') {
+			atual_certo++;
+			gab_certo.push(e.key);
+		}
+
+		if (e.key == 'Backspace') {
+			if (atual_certo > 0) {
+				gab_certo.pop();
+				atual_certo--;
+			}
+		}
+    $("#num_questao_certo").text(atual_certo + 1);
+    $("#q_certo").text(gab_certo.toString());
+
+    $("#text_certo").val("");
+	});
+
+	var atual_seu = 0;
+	var gab_seu = new Array();
+	$("#text_seu").keyup(function(e){
+		if (e.key >= 'a' && e.key <= 'e') {
+			atual_seu++;
+			gab_seu.push(e.key);
+		}
+
+		if (e.key == 'Backspace') {
+			if (atual_seu > 0) {
+				gab_seu.pop();
+				atual_seu--;
+			}
+		}
+    $("#num_questao_seu").text(atual_seu + 1);
+    $("#q_seu").text(gab_seu.toString());
+
+    $("#text_seu").val("");
+	});
+
+	$("#gerarJooj").click( function () {
+		$('#corpo_tabela').empty();//todo
+		let qtdCertas = 0;
+		let qtdErradas = 0;
+		for (i = atual_certo -1; i >= 0; i --) {
+			let classe = 'deep-orange lighten-4';
+			if ( gab_certo[i] == gab_seu[i]) {
+				qtdCertas++;
+				classe = 'green lighten-4';
+			} else {
+				qtdErradas ++;
+			}
+
+			$('#corpo_tabela').after('<tr class=\"' + classe + '\"><td><b>'+ (i + 1) + '</b></td>' + '<td>' + gab_certo[i] + '</td>' + '<td>' + gab_seu[i] + '</td></tr>');
+
+			$("#qtdTotal").text(atual_certo);
+			$("#qtdCertas").text(qtdCertas);
+			$("#qtdErradas").text(qtdErradas);
+			$("#perc").text((100 * qtdCertas / atual_certo) + "%");
+		}
+	})
+})
+</script>
+</body></html>
